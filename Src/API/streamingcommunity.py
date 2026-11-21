@@ -77,7 +77,7 @@ async def streaming_community(streams,id,client,MFP,MFP_CREDENTIALS):
             streams = await vixsrc(streams,id,client,MFP,MFP_CREDENTIALS)
         return streams
     except Exception as e:
-        logger.warning(f"StreamingCommunity failed {e}")
+        logger.warning(f"StreamingCommunity failed")
         return streams
         
 
