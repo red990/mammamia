@@ -35,7 +35,7 @@
             "ES_PROXY": "0"
         },
         "Guardaflix": {
-            "url": "	"https://guardaplay.autos",
+            "url": "https://guardaplay.autos",
             "enabled": "1",
             "GF_ForwardProxy": "0",
             "GF_PROXY": "0"
