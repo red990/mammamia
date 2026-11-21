@@ -81,6 +81,7 @@ async def search(showname,date,season,episode,MFP, MFP_CREDENTIALS,ismovie,clien
                 logger.warning(f"Guardoserie Failed to fetch search results: {response.status_code}")
     soup = BeautifulSoup(text,'lxml', parse_only=  SoupStrainer('a', class_='ss-title'))
     a_tags = soup.find_all('a')
+    logger.warning(f"GO ricerca: HTTP {response.status_code}; risultati {len(a_tags)}")
     for a in a_tags:
         href = a['href']
         response = await client.get(ForwardProxy + href, headers = headers, proxies = proxies)
